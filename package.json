@@ -4,7 +4,8 @@
   "description": "Post Like twitter with chunking",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "nodemon --exec babel-node server.js"
   },
   "repository": {
     "type": "git",
