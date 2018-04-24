@@ -1,8 +1,8 @@
 import Tweet  from '../models/TweetModel';
-
+import  Utils from '../Utils';
+import forEach from 'lodash.foreach';
 export default {
   getTweets: (req, res) => {
-    //TODO: ERROR handling
     Tweet.find()
     .then((tweet) => {
       return res.json(tweet);
@@ -10,10 +10,18 @@ export default {
     .catch((e) => res.json(e));
   },
   addTweet: (req, res) => {
-    const newTweet = new Tweet(req.body);
-    newTweet.save()
-    .then(res.json('ok'))
-    .catch((e) => res.json(e));
+    let data = Utils.splitMessage(req.body.title);
+    console.log(data);
+    forEach(data, (value) => {
+      const form = {
+        title: value
+      };
+      const newTweet = new Tweet(form);
+      newTweet.save()
+      .catch((e) => res.json(e));
+    });
+    return res.json('ok');
+
   }
 
 };
