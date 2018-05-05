@@ -17,3 +17,4 @@ app.use('/api', router);
 
 app.listen(port);
 console.log('Listening ' + port);
+export default app;

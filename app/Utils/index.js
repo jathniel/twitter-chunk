@@ -1,8 +1,8 @@
 export default {
   splitMessage: (message) => {
     const length = message.length;
-    if( length < 5 )return new Array(message);
-    let messageArray = split(message, 5);
+    if( length < 50 )return new Array(message);
+    let messageArray = split(message, 50);
     messageArray = messageArray.map((message, index) => {
       return `${index + 1}/${messageArray.length} ${message}`;
     });

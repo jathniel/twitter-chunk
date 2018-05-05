@@ -4,7 +4,7 @@
   "description": "Post Like twitter with chunking",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "mocha --timeout 10000 --compilers js:babel-core/register",
     "start": "nodemon --exec babel-node server.js"
   },
   "repository": {

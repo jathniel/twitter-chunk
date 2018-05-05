@@ -11,7 +11,6 @@ export default {
   },
   addTweet: (req, res) => {
     let data = Utils.splitMessage(req.body.title);
-    console.log(data);
     forEach(data, (value) => {
       const form = {
         title: value
