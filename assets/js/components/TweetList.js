@@ -7,7 +7,13 @@ const TweetList = ({
   return(
     <div>
       {tweets.map((tweet) =>
-        <div key={tweet._id}>{tweet.title}</div>
+        <div className="tweet" key={tweet._id}>
+          <div className="tweet__icon"></div>
+          <div className="tweet__container">
+            <div className="tweet__name">Anonymous</div>
+            <p className="tweet__description">{tweet.title}</p>
+          </div>
+      </div>
       )}
     </div>
   );

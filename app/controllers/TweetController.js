@@ -3,7 +3,7 @@ import  Utils from '../Utils';
 import forEach from 'lodash.foreach';
 export default {
   getTweets: (req, res) => {
-    Tweet.find()
+    Tweet.find().sort({date: -1})
     .then((tweet) => {
       return res.json(tweet);
     })
@@ -11,6 +11,7 @@ export default {
   },
   addTweet: (req, res) => {
     let data = Utils.splitMessage(req.body.title);
+    data = data.reverse();
     forEach(data, (value) => {
       const form = {
         title: value

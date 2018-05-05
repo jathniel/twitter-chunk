@@ -4,4 +4,39 @@
 
 body {
   padding: 40px;
+  background-color: #fafafa;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 15px;
+}
+
+.footer {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  padding: 15px;
+  right: 15px;
+}
+
+.tweet {
+  display: flex;
+  padding: 10px;
+}
+
+.tweet__icon {
+  display: inline;
+  content: ' ';
+  padding: 31px;
+  border-radius: 35px;
+  margin: 0 10px;
+  background: #f1f1f1;
+}
+
+.tweet__name {
+  font-weight: 700;
+  font-size: 14px;
 }
