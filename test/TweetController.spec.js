@@ -26,4 +26,12 @@ describe('TweetController', () => {
         done();
       });
   });
+  it('should render the index page', (done) => {
+    agent
+      .get('/')
+      .end((err, res) => {
+        res.should.have.status(200);
+        done();
+      });
+  });
 });
