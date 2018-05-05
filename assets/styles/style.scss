@@ -3,11 +3,11 @@
 }
  body {
   padding: 40px;
-  background-color: #fafafa;
+  background-color: #4CA0EB;
   position: relative;
   min-height: 100vh;
 }
-.container {
+.tweet-container {
   background: #fff;
   padding: 15px;
 }
@@ -20,11 +20,11 @@
 }
 .tweet {
   display: flex;
-  padding: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
   &__icon {
-    display: inline;
-    content: ' ';
-    padding: 31px;
+    display: block;
+    padding: 30px;
     border-radius: 35px;
     margin: 0 10px;
     background: #f1f1f1;
