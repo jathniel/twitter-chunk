@@ -4,7 +4,11 @@ import express from 'express';
 const router = express.Router();
 //TODO: ADD MIDDLEWARE FOR AUTHENTICATION
 //ROUTES FOR PROUCTS API
-router.get('/tweet', Tweet.getTweets);
-router.post('/tweet', Tweet.addTweet);
+router.get('/api/tweet', Tweet.getTweets);
+router.post('/api/tweet', Tweet.addTweet);
+
+//LOAD INDEX PAGE
+router.get('/', Tweet.render);
+
 
 export default router;

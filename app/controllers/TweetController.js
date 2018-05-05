@@ -21,6 +21,9 @@ export default {
     });
     return res.json('ok');
 
+  },
+  render: (req, res) => {
+    res.render('index');
   }
 
 };
