@@ -36,7 +36,7 @@ class Tweet extends Component {
   render() {
 
     return (
-      <div className="tweet-container col-xs-12 col-sm-5">
+      <div className="tweet-container col align-self-end col-xs-12 col-sm-5 ml-auto">
         <AddTweet tweet={this.state.tweet} handleTweet={this.handleTweet} handleSubmit={this.handleSubmit}/>
         <TweetList tweets={this.state.tweetList} />
       </div>

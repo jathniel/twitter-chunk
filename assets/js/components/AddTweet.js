@@ -12,7 +12,7 @@ const AddTweet = ({tweet, handleTweet, handleSubmit}) => {
           value={tweet}
           onChange = {handleTweet}
           placeholder="What's happenning"
-          className="form-control input input-lg margin-bottom10"/>
+          className="form-control input input-lg margin-top-10"/>
         </div>
       </div>
     </form>

@@ -6,6 +6,11 @@
   background-color: #4CA0EB;
   position: relative;
   min-height: 100vh;
+  background-image: url('/images/bg_bird.png');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-attachment: fixed;
+
 }
 .tweet-container {
   background: #fff;
@@ -35,4 +40,8 @@
     font-size: 14px;
   }
 
+}
+
+.margin-top-10 {
+  margin-top: 10px;
 }

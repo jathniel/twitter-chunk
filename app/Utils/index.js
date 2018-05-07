@@ -1,7 +1,8 @@
+const MAX_LENGTH = 50;
 export default {
   splitMessage: (message) => {
     const LENGTH = message.length;
-    if( LENGTH <= 50 )return new Array(message);
+    if( LENGTH <= MAX_LENGTH )return new Array(message);
 
     let messageSize = getSize(LENGTH);
     let messageArray = split(message, messageSize);
@@ -12,8 +13,8 @@ export default {
   }
 };
 const getSize = (messageLength) => {
-  let length = numberCount(Math.round(messageLength/50));
-  return 50 - (length + 2);
+  let length = numberCount(Math.round(messageLength/ MAX_LENGTH));
+  return MAX_LENGTH - (length + 2);
 };
 const numberCount = (number) => {
   return number.toString().length;
