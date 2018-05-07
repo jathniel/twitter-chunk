@@ -17,7 +17,6 @@ app.set('view engine', 'ejs');
 app.use(sassMiddleware({
   src: path.join(__dirname, 'assets/styles'),
   dest: path.join(__dirname, 'public'),
-  debug: true,
   outputStyle: 'expanded'
 }));
 

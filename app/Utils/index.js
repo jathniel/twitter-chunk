@@ -1,22 +1,27 @@
 export default {
   splitMessage: (message) => {
-    const length = message.length;
-    if( length < 50 )return new Array(message);
-    let messageArray = split(message, 50);
+    const LENGTH = message.length;
+    if( LENGTH <= 50 )return new Array(message);
+
+    let messageSize = getSize(LENGTH);
+    let messageArray = split(message, messageSize);
     messageArray = messageArray.map((message, index) => {
       return `${index + 1}/${messageArray.length} ${message}`;
     });
     return messageArray;
   }
-
 };
-const split= (message, InitialLength) => {
+const getSize = (messageLength) => {
+  let length = Math.round(messageLength/50).toString().length;
+  return 50 - (length + 2);
+};
+const split = (message, InitialLength) => {
   const messageArray = [];
   let messageLeft = message;
   let length = InitialLength;
   do {
 
-    if(messageLeft.charAt(length - 1) !== ' ' && messageLeft.length > InitialLength) {
+    if(messageLeft.charAt(length) !== ' ' && messageLeft.length > InitialLength) {
       length--;
     } else {
       messageArray.push(messageLeft.substring(0, length).trim());
